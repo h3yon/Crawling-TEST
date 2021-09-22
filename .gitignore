@@ -1,11 +1,11 @@
-./img
-./img_homewxork
-./pyvenv*
+img
+img_homework
 
 bin
 .idea
 include
 lib
 
-./chromedriver
-./sparta.iml
+pyvenv.cfg
+chromedriver
+sparta.iml
