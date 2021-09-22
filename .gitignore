@@ -1,0 +1,11 @@
+./img
+./img_homewxork
+./pyvenv*
+
+bin
+.idea
+include
+lib
+
+./chromedriver
+./sparta.iml
