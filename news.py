@@ -15,15 +15,15 @@ articles = soup.select('#main_pack > section.sc_new.sp_nnews._prs_nws > div > di
 wb = Workbook()
 ws1 = wb.active
 ws1.title = "articles"
-ws1.append(["제목", "링크", "신문사"])
+ws1.append(["제목", "링크", "신문사", "썸네일"])
 
 for article in articles:
     title = article.select_one('div.news_area > a').text
     url = article.select_one('div.news_area > a')['href']
     comp = article.select_one('a.info.press').text.split(' ')[0].replace('언론사', '')
-    # div.news_area > div > div.info_group > a > span
+    thumbnail = article.select_one('img')['src']
 
-    ws1.append([title, url, comp])
+    ws1.append([title, url, comp, thumbnail])
 
 driver.quit()
 wb.save(filename='articles.xlsx')
