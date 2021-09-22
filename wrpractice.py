@@ -1,8 +1,8 @@
-# 쓰기 test!!
-f = open("test.txt", "w", encoding="utf-8")
-f.write("안녕, 스파르타!\n")
 
-for i in [1,2,3,4,5]:
-    f.write(f"{i}번째 줄이에요\n")
+text = ''
+with open("test.txt", "r", encoding="utf-8") as f:
+    lines = f.readlines()
+    for line in lines:
+        text += line
 
-f.close()
+print(line)
